@@ -6,7 +6,7 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   module: {
     rules: [
@@ -32,7 +32,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|gif|png)$/,
+        test: /\.(jpg|gif|png|txt)$/,
         type: 'asset/resource',
       },
     ],
